@@ -1,0 +1,2512 @@
+Warning: No input files provided, input tensors will be filled with 0s.
+Info: ArmNN v25.0.0
+
+Info: Initialization time: 9.27 ms
+
+Info: Network parsing time: 75.82 ms
+
+Info: Optimization time: 6.14 ms
+
+Info: Network loading time: 67854.87 ms
+
+{
+	"ArmNN": {
+		"inference_measurements_#1": {
+			"type": "Event",
+			"Wall clock time_#1": {
+				"type": "Measurement",
+				"raw": [
+					557918.542000
+				],
+				"unit": "us"
+			},
+			"Wall clock time (Start)_#1": {
+				"type": "Measurement",
+				"raw": [
+					376550160100.593994
+				],
+				"unit": "us"
+			},
+			"Wall clock time (Stop)_#1": {
+				"type": "Measurement",
+				"raw": [
+					376550718019.135986
+				],
+				"unit": "us"
+			},
+			"PrepareInputs_#2": {
+				"type": "Event",
+				"Wall clock time_#2": {
+					"type": "Measurement",
+					"raw": [
+						41.542000
+					],
+					"unit": "us"
+				},
+				"Wall clock time (Start)_#2": {
+					"type": "Measurement",
+					"raw": [
+						376550160124.552002
+					],
+					"unit": "us"
+				},
+				"Wall clock time (Stop)_#2": {
+					"type": "Measurement",
+					"raw": [
+						376550160166.093994
+					],
+					"unit": "us"
+				}
+			},
+			"PrepareOutputs_#3": {
+				"type": "Event",
+				"Wall clock time_#3": {
+					"type": "Measurement",
+					"raw": [
+						11.125000
+					],
+					"unit": "us"
+				},
+				"Wall clock time (Start)_#3": {
+					"type": "Measurement",
+					"raw": [
+						376550160167.635986
+					],
+					"unit": "us"
+				},
+				"Wall clock time (Stop)_#3": {
+					"type": "Measurement",
+					"raw": [
+						376550160178.760986
+					],
+					"unit": "us"
+				}
+			},
+			"Execute_#4": {
+				"type": "Event",
+				"Wall clock time_#4": {
+					"type": "Measurement",
+					"raw": [
+						557829.083000
+					],
+					"unit": "us"
+				},
+				"Wall clock time (Start)_#4": {
+					"type": "Measurement",
+					"raw": [
+						376550160181.260986
+					],
+					"unit": "us"
+				},
+				"Wall clock time (Stop)_#4": {
+					"type": "Measurement",
+					"raw": [
+						376550718010.343994
+					],
+					"unit": "us"
+				},
+				"Working Memory Allocation_#5": {
+					"type": "Event",
+					"Wall clock time_#5": {
+						"type": "Measurement",
+						"raw": [
+							705.708000
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Start)_#5": {
+						"type": "Measurement",
+						"raw": [
+							376550160191.510986
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Stop)_#5": {
+						"type": "Measurement",
+						"raw": [
+							376550160897.218994
+						],
+						"unit": "us"
+					}
+				},
+				"CopyMemGeneric_Execute_#6": {
+					"type": "Event",
+					"Wall clock time_#6": {
+						"type": "Measurement",
+						"raw": [
+							712.750000
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Start)_#6": {
+						"type": "Measurement",
+						"raw": [
+							376550160904.927002
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Stop)_#6": {
+						"type": "Measurement",
+						"raw": [
+							376550161617.677002
+						],
+						"unit": "us"
+					},
+					"Synchronize buffers_#7": {
+						"type": "Event",
+						"Wall clock time_#7": {
+							"type": "Measurement",
+							"raw": [
+								609.584000
+							],
+							"unit": "us"
+						},
+						"Wall clock time (Start)_#7": {
+							"type": "Measurement",
+							"raw": [
+								376550160923.927002
+							],
+							"unit": "us"
+						},
+						"Wall clock time (Stop)_#7": {
+							"type": "Measurement",
+							"raw": [
+								376550161533.510986
+							],
+							"unit": "us"
+						}
+					}
+				},
+				"ClConvolution2dWorkload_Execute_#8": {
+					"type": "Event",
+					"OpenClKernelTimer/0: im2col3x3_nhwc GWS[2,12544,1]_#8": {
+						"type": "Measurement",
+						"raw": [
+							600.648000
+						],
+						"unit": "us"
+					},
+					"OpenClKernelTimer/1: gemmlowp_matrix_a_reduction GWS[12544,1,1]_#8": {
+						"type": "Measurement",
+						"raw": [
+							202.434000
+						],
+						"unit": "us"
+					},
+					"OpenClKernelTimer/2: gemmlowp_mm_reshaped_only_rhs_t_fused_output_stage_fixedpoint GWS[8,4096,1]_#8": {
+						"type": "Measurement",
+						"raw": [
+							6158.540000
+						],
+						"unit": "us"
+					},
+					"Wall clock time_#8": {
+						"type": "Measurement",
+						"raw": [
+							993.500000
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Start)_#8": {
+						"type": "Measurement",
+						"raw": [
+							376550161625.677002
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Stop)_#8": {
+						"type": "Measurement",
+						"raw": [
+							376550162619.177002
+						],
+						"unit": "us"
+					}
+				},
+				"ClDepthwiseConvolutionWorkload_Execute_#9": {
+					"type": "Event",
+					"OpenClKernelTimer/0: dwc_MxN_native_quantized8_nhwc GWS[4,112,112]_#9": {
+						"type": "Measurement",
+						"raw": [
+							3352.214000
+						],
+						"unit": "us"
+					},
+					"Wall clock time_#9": {
+						"type": "Measurement",
+						"raw": [
+							115.250000
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Start)_#9": {
+						"type": "Measurement",
+						"raw": [
+							376550162625.843994
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Stop)_#9": {
+						"type": "Measurement",
+						"raw": [
+							376550162741.093994
+						],
+						"unit": "us"
+					}
+				},
+				"ClConvolution2dWorkload_Execute_#10": {
+					"type": "Event",
+					"OpenClKernelTimer/0: gemmlowp_matrix_a_reduction GWS[112,112,1]_#10": {
+						"type": "Measurement",
+						"raw": [
+							161.628000
+						],
+						"unit": "us"
+					},
+					"OpenClKernelTimer/1: gemmlowp_mm_reshaped_only_rhs_t_fused_output_stage_fixedpoint GWS[4,32,112]_#10": {
+						"type": "Measurement",
+						"raw": [
+							12732.747000
+						],
+						"unit": "us"
+					},
+					"Wall clock time_#10": {
+						"type": "Measurement",
+						"raw": [
+							204.916000
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Start)_#10": {
+						"type": "Measurement",
+						"raw": [
+							376550162746.010986
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Stop)_#10": {
+						"type": "Measurement",
+						"raw": [
+							376550162950.927002
+						],
+						"unit": "us"
+					}
+				},
+				"ClConvolution2dWorkload_Execute_#11": {
+					"type": "Event",
+					"OpenClKernelTimer/0: gemmlowp_matrix_a_reduction GWS[112,112,1]_#11": {
+						"type": "Measurement",
+						"raw": [
+							117.506000
+						],
+						"unit": "us"
+					},
+					"OpenClKernelTimer/1: gemmlowp_mm_reshaped_only_rhs_t_fused_output_stage_fixedpoint GWS[32,32,112]_#11": {
+						"type": "Measurement",
+						"raw": [
+							15952.707000
+						],
+						"unit": "us"
+					},
+					"Wall clock time_#11": {
+						"type": "Measurement",
+						"raw": [
+							226.667000
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Start)_#11": {
+						"type": "Measurement",
+						"raw": [
+							376550162954.302002
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Stop)_#11": {
+						"type": "Measurement",
+						"raw": [
+							376550163180.968994
+						],
+						"unit": "us"
+					}
+				},
+				"ClDepthwiseConvolutionWorkload_Execute_#12": {
+					"type": "Event",
+					"OpenClKernelTimer/0: dwc_MxN_native_quantized8_nhwc GWS[12,56,56]_#12": {
+						"type": "Measurement",
+						"raw": [
+							2609.368000
+						],
+						"unit": "us"
+					},
+					"Wall clock time_#12": {
+						"type": "Measurement",
+						"raw": [
+							107.625000
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Start)_#12": {
+						"type": "Measurement",
+						"raw": [
+							376550163217.635986
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Stop)_#12": {
+						"type": "Measurement",
+						"raw": [
+							376550163325.260986
+						],
+						"unit": "us"
+					}
+				},
+				"ClConvolution2dWorkload_Execute_#13": {
+					"type": "Event",
+					"OpenClKernelTimer/0: gemmlowp_matrix_a_reduction GWS[56,56,1]_#13": {
+						"type": "Measurement",
+						"raw": [
+							130.564000
+						],
+						"unit": "us"
+					},
+					"OpenClKernelTimer/1: gemmlowp_mm_reshaped_only_rhs_t_fused_output_stage_fixedpoint GWS[8,16,56]_#13": {
+						"type": "Measurement",
+						"raw": [
+							11128.503000
+						],
+						"unit": "us"
+					},
+					"Wall clock time_#13": {
+						"type": "Measurement",
+						"raw": [
+							209.417000
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Start)_#13": {
+						"type": "Measurement",
+						"raw": [
+							376550163328.218994
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Stop)_#13": {
+						"type": "Measurement",
+						"raw": [
+							376550163537.635986
+						],
+						"unit": "us"
+					}
+				},
+				"ClConvolution2dWorkload_Execute_#14": {
+					"type": "Event",
+					"OpenClKernelTimer/0: gemmlowp_matrix_a_reduction GWS[56,56,1]_#14": {
+						"type": "Measurement",
+						"raw": [
+							40.083000
+						],
+						"unit": "us"
+					},
+					"OpenClKernelTimer/1: gemmlowp_mm_reshaped_only_rhs_t_fused_output_stage_fixedpoint GWS[64,16,56]_#14": {
+						"type": "Measurement",
+						"raw": [
+							5703.373000
+						],
+						"unit": "us"
+					},
+					"Wall clock time_#14": {
+						"type": "Measurement",
+						"raw": [
+							226.458000
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Start)_#14": {
+						"type": "Measurement",
+						"raw": [
+							376550163540.760986
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Stop)_#14": {
+						"type": "Measurement",
+						"raw": [
+							376550163767.218994
+						],
+						"unit": "us"
+					}
+				},
+				"ClDepthwiseConvolutionWorkload_Execute_#15": {
+					"type": "Event",
+					"OpenClKernelTimer/0: dwc_MxN_native_quantized8_nhwc GWS[18,56,56]_#15": {
+						"type": "Measurement",
+						"raw": [
+							3763.933000
+						],
+						"unit": "us"
+					},
+					"Wall clock time_#15": {
+						"type": "Measurement",
+						"raw": [
+							100.583000
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Start)_#15": {
+						"type": "Measurement",
+						"raw": [
+							376550163770.635986
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Stop)_#15": {
+						"type": "Measurement",
+						"raw": [
+							376550163871.218994
+						],
+						"unit": "us"
+					}
+				},
+				"ClConvolution2dWorkload_Execute_#16": {
+					"type": "Event",
+					"OpenClKernelTimer/0: gemmlowp_matrix_a_reduction GWS[56,56,1]_#16": {
+						"type": "Measurement",
+						"raw": [
+							183.577000
+						],
+						"unit": "us"
+					},
+					"OpenClKernelTimer/1: gemmlowp_mm_reshaped_only_rhs_t_fused_output_stage_fixedpoint GWS[8,16,56]_#16": {
+						"type": "Measurement",
+						"raw": [
+							16405.417000
+						],
+						"unit": "us"
+					},
+					"Wall clock time_#16": {
+						"type": "Measurement",
+						"raw": [
+							311.458000
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Start)_#16": {
+						"type": "Measurement",
+						"raw": [
+							376550163876.760986
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Stop)_#16": {
+						"type": "Measurement",
+						"raw": [
+							376550164188.218994
+						],
+						"unit": "us"
+					}
+				},
+				"ClAdditionWorkload_Execute_#17": {
+					"type": "Event",
+					"OpenClKernelTimer/0: elementwise_operation_ADD_quantized GWS[2,56,56]_#17": {
+						"type": "Measurement",
+						"raw": [
+							179.066000
+						],
+						"unit": "us"
+					},
+					"Wall clock time_#17": {
+						"type": "Measurement",
+						"raw": [
+							133.334000
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Start)_#17": {
+						"type": "Measurement",
+						"raw": [
+							376550164193.802002
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Stop)_#17": {
+						"type": "Measurement",
+						"raw": [
+							376550164327.135986
+						],
+						"unit": "us"
+					}
+				},
+				"ClConvolution2dWorkload_Execute_#18": {
+					"type": "Event",
+					"OpenClKernelTimer/0: gemmlowp_matrix_a_reduction GWS[56,56,1]_#18": {
+						"type": "Measurement",
+						"raw": [
+							41.021000
+						],
+						"unit": "us"
+					},
+					"OpenClKernelTimer/1: gemmlowp_mm_reshaped_only_rhs_t_fused_output_stage_fixedpoint GWS[64,16,56]_#18": {
+						"type": "Measurement",
+						"raw": [
+							6145.461000
+						],
+						"unit": "us"
+					},
+					"Wall clock time_#18": {
+						"type": "Measurement",
+						"raw": [
+							217.292000
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Start)_#18": {
+						"type": "Measurement",
+						"raw": [
+							376550164330.927002
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Stop)_#18": {
+						"type": "Measurement",
+						"raw": [
+							376550164548.218994
+						],
+						"unit": "us"
+					}
+				},
+				"ClDepthwiseConvolutionWorkload_Execute_#19": {
+					"type": "Event",
+					"OpenClKernelTimer/0: dwc_MxN_native_quantized8_nhwc GWS[18,28,28]_#19": {
+						"type": "Measurement",
+						"raw": [
+							976.364000
+						],
+						"unit": "us"
+					},
+					"Wall clock time_#19": {
+						"type": "Measurement",
+						"raw": [
+							110.500000
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Start)_#19": {
+						"type": "Measurement",
+						"raw": [
+							376550164551.468994
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Stop)_#19": {
+						"type": "Measurement",
+						"raw": [
+							376550164661.968994
+						],
+						"unit": "us"
+					}
+				},
+				"ClConvolution2dWorkload_Execute_#20": {
+					"type": "Event",
+					"OpenClKernelTimer/0: gemmlowp_matrix_a_reduction GWS[28,28,1]_#20": {
+						"type": "Measurement",
+						"raw": [
+							49.584000
+						],
+						"unit": "us"
+					},
+					"OpenClKernelTimer/1: gemmlowp_mm_reshaped_only_rhs_t_fused_output_stage_fixedpoint GWS[8,8,28]_#20": {
+						"type": "Measurement",
+						"raw": [
+							6198.870000
+						],
+						"unit": "us"
+					},
+					"Wall clock time_#20": {
+						"type": "Measurement",
+						"raw": [
+							187.542000
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Start)_#20": {
+						"type": "Measurement",
+						"raw": [
+							376550164666.927002
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Stop)_#20": {
+						"type": "Measurement",
+						"raw": [
+							376550164854.468994
+						],
+						"unit": "us"
+					}
+				},
+				"ClConvolution2dWorkload_Execute_#21": {
+					"type": "Event",
+					"OpenClKernelTimer/0: gemmlowp_matrix_a_reduction GWS[28,28,1]_#21": {
+						"type": "Measurement",
+						"raw": [
+							13.094000
+						],
+						"unit": "us"
+					},
+					"OpenClKernelTimer/1: gemmlowp_mm_reshaped_only_rhs_t_fused_output_stage_fixedpoint GWS[64,8,28]_#21": {
+						"type": "Measurement",
+						"raw": [
+							9387.454000
+						],
+						"unit": "us"
+					},
+					"Wall clock time_#21": {
+						"type": "Measurement",
+						"raw": [
+							191.250000
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Start)_#21": {
+						"type": "Measurement",
+						"raw": [
+							376550164857.052002
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Stop)_#21": {
+						"type": "Measurement",
+						"raw": [
+							376550165048.302002
+						],
+						"unit": "us"
+					}
+				},
+				"ClDepthwiseConvolutionWorkload_Execute_#22": {
+					"type": "Event",
+					"OpenClKernelTimer/0: dwc_MxN_native_quantized8_nhwc GWS[24,28,28]_#22": {
+						"type": "Measurement",
+						"raw": [
+							1261.019000
+						],
+						"unit": "us"
+					},
+					"Wall clock time_#22": {
+						"type": "Measurement",
+						"raw": [
+							149.584000
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Start)_#22": {
+						"type": "Measurement",
+						"raw": [
+							376550165051.302002
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Stop)_#22": {
+						"type": "Measurement",
+						"raw": [
+							376550165200.885986
+						],
+						"unit": "us"
+					}
+				},
+				"ClConvolution2dWorkload_Execute_#23": {
+					"type": "Event",
+					"OpenClKernelTimer/0: gemmlowp_matrix_a_reduction GWS[28,28,1]_#23": {
+						"type": "Measurement",
+						"raw": [
+							66.741000
+						],
+						"unit": "us"
+					},
+					"OpenClKernelTimer/1: gemmlowp_mm_reshaped_only_rhs_t_fused_output_stage_fixedpoint GWS[8,8,28]_#23": {
+						"type": "Measurement",
+						"raw": [
+							8186.208000
+						],
+						"unit": "us"
+					},
+					"Wall clock time_#23": {
+						"type": "Measurement",
+						"raw": [
+							186.042000
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Start)_#23": {
+						"type": "Measurement",
+						"raw": [
+							376550165203.968994
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Stop)_#23": {
+						"type": "Measurement",
+						"raw": [
+							376550165390.010986
+						],
+						"unit": "us"
+					}
+				},
+				"ClAdditionWorkload_Execute_#24": {
+					"type": "Event",
+					"OpenClKernelTimer/0: elementwise_operation_ADD_quantized GWS[2,28,28]_#24": {
+						"type": "Measurement",
+						"raw": [
+							48.937000
+						],
+						"unit": "us"
+					},
+					"Wall clock time_#24": {
+						"type": "Measurement",
+						"raw": [
+							81.292000
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Start)_#24": {
+						"type": "Measurement",
+						"raw": [
+							376550165395.593994
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Stop)_#24": {
+						"type": "Measurement",
+						"raw": [
+							376550165476.885986
+						],
+						"unit": "us"
+					}
+				},
+				"ClConvolution2dWorkload_Execute_#25": {
+					"type": "Event",
+					"OpenClKernelTimer/0: gemmlowp_matrix_a_reduction GWS[28,28,1]_#25": {
+						"type": "Measurement",
+						"raw": [
+							12.641000
+						],
+						"unit": "us"
+					},
+					"OpenClKernelTimer/1: gemmlowp_mm_reshaped_only_rhs_t_fused_output_stage_fixedpoint GWS[64,8,28]_#25": {
+						"type": "Measurement",
+						"raw": [
+							9632.211000
+						],
+						"unit": "us"
+					},
+					"Wall clock time_#25": {
+						"type": "Measurement",
+						"raw": [
+							277.000000
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Start)_#25": {
+						"type": "Measurement",
+						"raw": [
+							376550165479.218994
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Stop)_#25": {
+						"type": "Measurement",
+						"raw": [
+							376550165756.218994
+						],
+						"unit": "us"
+					}
+				},
+				"ClDepthwiseConvolutionWorkload_Execute_#26": {
+					"type": "Event",
+					"OpenClKernelTimer/0: dwc_MxN_native_quantized8_nhwc GWS[24,28,28]_#26": {
+						"type": "Measurement",
+						"raw": [
+							1277.752000
+						],
+						"unit": "us"
+					},
+					"Wall clock time_#26": {
+						"type": "Measurement",
+						"raw": [
+							146.334000
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Start)_#26": {
+						"type": "Measurement",
+						"raw": [
+							376550165760.302002
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Stop)_#26": {
+						"type": "Measurement",
+						"raw": [
+							376550165906.635986
+						],
+						"unit": "us"
+					}
+				},
+				"ClConvolution2dWorkload_Execute_#27": {
+					"type": "Event",
+					"OpenClKernelTimer/0: gemmlowp_matrix_a_reduction GWS[28,28,1]_#27": {
+						"type": "Measurement",
+						"raw": [
+							65.875000
+						],
+						"unit": "us"
+					},
+					"OpenClKernelTimer/1: gemmlowp_mm_reshaped_only_rhs_t_fused_output_stage_fixedpoint GWS[8,8,28]_#27": {
+						"type": "Measurement",
+						"raw": [
+							8210.080000
+						],
+						"unit": "us"
+					},
+					"Wall clock time_#27": {
+						"type": "Measurement",
+						"raw": [
+							278.250000
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Start)_#27": {
+						"type": "Measurement",
+						"raw": [
+							376550165910.135986
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Stop)_#27": {
+						"type": "Measurement",
+						"raw": [
+							376550166188.385986
+						],
+						"unit": "us"
+					}
+				},
+				"ClAdditionWorkload_Execute_#28": {
+					"type": "Event",
+					"OpenClKernelTimer/0: elementwise_operation_ADD_quantized GWS[2,28,28]_#28": {
+						"type": "Measurement",
+						"raw": [
+							46.324000
+						],
+						"unit": "us"
+					},
+					"Wall clock time_#28": {
+						"type": "Measurement",
+						"raw": [
+							77.167000
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Start)_#28": {
+						"type": "Measurement",
+						"raw": [
+							376550166194.968994
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Stop)_#28": {
+						"type": "Measurement",
+						"raw": [
+							376550166272.135986
+						],
+						"unit": "us"
+					}
+				},
+				"ClConvolution2dWorkload_Execute_#29": {
+					"type": "Event",
+					"OpenClKernelTimer/0: gemmlowp_matrix_a_reduction GWS[28,28,1]_#29": {
+						"type": "Measurement",
+						"raw": [
+							12.741000
+						],
+						"unit": "us"
+					},
+					"OpenClKernelTimer/1: gemmlowp_mm_reshaped_only_rhs_t_fused_output_stage_fixedpoint GWS[64,8,28]_#29": {
+						"type": "Measurement",
+						"raw": [
+							9223.792000
+						],
+						"unit": "us"
+					},
+					"Wall clock time_#29": {
+						"type": "Measurement",
+						"raw": [
+							181.833000
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Start)_#29": {
+						"type": "Measurement",
+						"raw": [
+							376550166274.468994
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Stop)_#29": {
+						"type": "Measurement",
+						"raw": [
+							376550166456.302002
+						],
+						"unit": "us"
+					}
+				},
+				"ClDepthwiseConvolutionWorkload_Execute_#30": {
+					"type": "Event",
+					"OpenClKernelTimer/0: dwc_MxN_native_quantized8_nhwc GWS[24,14,14]_#30": {
+						"type": "Measurement",
+						"raw": [
+							316.602000
+						],
+						"unit": "us"
+					},
+					"Wall clock time_#30": {
+						"type": "Measurement",
+						"raw": [
+							148.167000
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Start)_#30": {
+						"type": "Measurement",
+						"raw": [
+							376550166459.302002
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Stop)_#30": {
+						"type": "Measurement",
+						"raw": [
+							376550166607.468994
+						],
+						"unit": "us"
+					}
+				},
+				"ClConvolution2dWorkload_Execute_#31": {
+					"type": "Event",
+					"OpenClKernelTimer/0: gemmlowp_matrix_a_reduction GWS[14,14,1]_#31": {
+						"type": "Measurement",
+						"raw": [
+							15.238000
+						],
+						"unit": "us"
+					},
+					"OpenClKernelTimer/1: gemmlowp_mm_reshaped_only_rhs_t_fused_output_stage_fixedpoint GWS[16,4,14]_#31": {
+						"type": "Measurement",
+						"raw": [
+							4845.575000
+						],
+						"unit": "us"
+					},
+					"Wall clock time_#31": {
+						"type": "Measurement",
+						"raw": [
+							193.542000
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Start)_#31": {
+						"type": "Measurement",
+						"raw": [
+							376550166610.593994
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Stop)_#31": {
+						"type": "Measurement",
+						"raw": [
+							376550166804.135986
+						],
+						"unit": "us"
+					}
+				},
+				"ClConvolution2dWorkload_Execute_#32": {
+					"type": "Event",
+					"OpenClKernelTimer/0: gemmlowp_matrix_a_reduction GWS[14,14,1]_#32": {
+						"type": "Measurement",
+						"raw": [
+							7.742000
+						],
+						"unit": "us"
+					},
+					"OpenClKernelTimer/1: gemmlowp_mm_reshaped_only_rhs_t_fused_output_stage_fixedpoint GWS[128,4,14]_#32": {
+						"type": "Measurement",
+						"raw": [
+							11658.627000
+						],
+						"unit": "us"
+					},
+					"Wall clock time_#32": {
+						"type": "Measurement",
+						"raw": [
+							218.000000
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Start)_#32": {
+						"type": "Measurement",
+						"raw": [
+							376550166808.927002
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Stop)_#32": {
+						"type": "Measurement",
+						"raw": [
+							376550167026.927002
+						],
+						"unit": "us"
+					}
+				},
+				"ClDepthwiseConvolutionWorkload_Execute_#33": {
+					"type": "Event",
+					"OpenClKernelTimer/0: dwc_MxN_native_quantized8_nhwc GWS[48,14,14]_#33": {
+						"type": "Measurement",
+						"raw": [
+							601.217000
+						],
+						"unit": "us"
+					},
+					"Wall clock time_#33": {
+						"type": "Measurement",
+						"raw": [
+							104.125000
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Start)_#33": {
+						"type": "Measurement",
+						"raw": [
+							376550167029.843994
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Stop)_#33": {
+						"type": "Measurement",
+						"raw": [
+							376550167133.968994
+						],
+						"unit": "us"
+					}
+				},
+				"ClConvolution2dWorkload_Execute_#34": {
+					"type": "Event",
+					"OpenClKernelTimer/0: gemmlowp_matrix_a_reduction GWS[14,14,1]_#34": {
+						"type": "Measurement",
+						"raw": [
+							27.479000
+						],
+						"unit": "us"
+					},
+					"OpenClKernelTimer/1: gemmlowp_mm_reshaped_only_rhs_t_fused_output_stage_fixedpoint GWS[16,4,14]_#34": {
+						"type": "Measurement",
+						"raw": [
+							10596.085000
+						],
+						"unit": "us"
+					},
+					"Wall clock time_#34": {
+						"type": "Measurement",
+						"raw": [
+							331.417000
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Start)_#34": {
+						"type": "Measurement",
+						"raw": [
+							376550167136.593994
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Stop)_#34": {
+						"type": "Measurement",
+						"raw": [
+							376550167468.010986
+						],
+						"unit": "us"
+					}
+				},
+				"ClAdditionWorkload_Execute_#35": {
+					"type": "Event",
+					"OpenClKernelTimer/0: elementwise_operation_ADD_quantized GWS[4,14,14]_#35": {
+						"type": "Measurement",
+						"raw": [
+							26.334000
+						],
+						"unit": "us"
+					},
+					"Wall clock time_#35": {
+						"type": "Measurement",
+						"raw": [
+							84.875000
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Start)_#35": {
+						"type": "Measurement",
+						"raw": [
+							376550167472.968994
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Stop)_#35": {
+						"type": "Measurement",
+						"raw": [
+							376550167557.843994
+						],
+						"unit": "us"
+					}
+				},
+				"ClConvolution2dWorkload_Execute_#36": {
+					"type": "Event",
+					"OpenClKernelTimer/0: gemmlowp_matrix_a_reduction GWS[14,14,1]_#36": {
+						"type": "Measurement",
+						"raw": [
+							7.895000
+						],
+						"unit": "us"
+					},
+					"OpenClKernelTimer/1: gemmlowp_mm_reshaped_only_rhs_t_fused_output_stage_fixedpoint GWS[128,4,14]_#36": {
+						"type": "Measurement",
+						"raw": [
+							11039.374000
+						],
+						"unit": "us"
+					},
+					"Wall clock time_#36": {
+						"type": "Measurement",
+						"raw": [
+							190.708000
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Start)_#36": {
+						"type": "Measurement",
+						"raw": [
+							376550167562.260986
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Stop)_#36": {
+						"type": "Measurement",
+						"raw": [
+							376550167752.968994
+						],
+						"unit": "us"
+					}
+				},
+				"ClDepthwiseConvolutionWorkload_Execute_#37": {
+					"type": "Event",
+					"OpenClKernelTimer/0: dwc_MxN_native_quantized8_nhwc GWS[48,14,14]_#37": {
+						"type": "Measurement",
+						"raw": [
+							598.953000
+						],
+						"unit": "us"
+					},
+					"Wall clock time_#37": {
+						"type": "Measurement",
+						"raw": [
+							102.792000
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Start)_#37": {
+						"type": "Measurement",
+						"raw": [
+							376550167755.718994
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Stop)_#37": {
+						"type": "Measurement",
+						"raw": [
+							376550167858.510986
+						],
+						"unit": "us"
+					}
+				},
+				"ClConvolution2dWorkload_Execute_#38": {
+					"type": "Event",
+					"OpenClKernelTimer/0: gemmlowp_matrix_a_reduction GWS[14,14,1]_#38": {
+						"type": "Measurement",
+						"raw": [
+							26.858000
+						],
+						"unit": "us"
+					},
+					"OpenClKernelTimer/1: gemmlowp_mm_reshaped_only_rhs_t_fused_output_stage_fixedpoint GWS[16,4,14]_#38": {
+						"type": "Measurement",
+						"raw": [
+							9545.167000
+						],
+						"unit": "us"
+					},
+					"Wall clock time_#38": {
+						"type": "Measurement",
+						"raw": [
+							231.666000
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Start)_#38": {
+						"type": "Measurement",
+						"raw": [
+							376550167861.510986
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Stop)_#38": {
+						"type": "Measurement",
+						"raw": [
+							376550168093.177002
+						],
+						"unit": "us"
+					}
+				},
+				"ClAdditionWorkload_Execute_#39": {
+					"type": "Event",
+					"OpenClKernelTimer/0: elementwise_operation_ADD_quantized GWS[4,14,14]_#39": {
+						"type": "Measurement",
+						"raw": [
+							27.862000
+						],
+						"unit": "us"
+					},
+					"Wall clock time_#39": {
+						"type": "Measurement",
+						"raw": [
+							71.542000
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Start)_#39": {
+						"type": "Measurement",
+						"raw": [
+							376550168096.552002
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Stop)_#39": {
+						"type": "Measurement",
+						"raw": [
+							376550168168.093994
+						],
+						"unit": "us"
+					}
+				},
+				"ClConvolution2dWorkload_Execute_#40": {
+					"type": "Event",
+					"OpenClKernelTimer/0: gemmlowp_matrix_a_reduction GWS[14,14,1]_#40": {
+						"type": "Measurement",
+						"raw": [
+							7.788000
+						],
+						"unit": "us"
+					},
+					"OpenClKernelTimer/1: gemmlowp_mm_reshaped_only_rhs_t_fused_output_stage_fixedpoint GWS[128,4,14]_#40": {
+						"type": "Measurement",
+						"raw": [
+							11877.169000
+						],
+						"unit": "us"
+					},
+					"Wall clock time_#40": {
+						"type": "Measurement",
+						"raw": [
+							188.417000
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Start)_#40": {
+						"type": "Measurement",
+						"raw": [
+							376550168173.052002
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Stop)_#40": {
+						"type": "Measurement",
+						"raw": [
+							376550168361.468994
+						],
+						"unit": "us"
+					}
+				},
+				"ClDepthwiseConvolutionWorkload_Execute_#41": {
+					"type": "Event",
+					"OpenClKernelTimer/0: dwc_MxN_native_quantized8_nhwc GWS[48,14,14]_#41": {
+						"type": "Measurement",
+						"raw": [
+							639.414000
+						],
+						"unit": "us"
+					},
+					"Wall clock time_#41": {
+						"type": "Measurement",
+						"raw": [
+							134.000000
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Start)_#41": {
+						"type": "Measurement",
+						"raw": [
+							376550168364.343994
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Stop)_#41": {
+						"type": "Measurement",
+						"raw": [
+							376550168498.343994
+						],
+						"unit": "us"
+					}
+				},
+				"ClConvolution2dWorkload_Execute_#42": {
+					"type": "Event",
+					"OpenClKernelTimer/0: gemmlowp_matrix_a_reduction GWS[14,14,1]_#42": {
+						"type": "Measurement",
+						"raw": [
+							26.598000
+						],
+						"unit": "us"
+					},
+					"OpenClKernelTimer/1: gemmlowp_mm_reshaped_only_rhs_t_fused_output_stage_fixedpoint GWS[16,4,14]_#42": {
+						"type": "Measurement",
+						"raw": [
+							9495.625000
+						],
+						"unit": "us"
+					},
+					"Wall clock time_#42": {
+						"type": "Measurement",
+						"raw": [
+							286.666000
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Start)_#42": {
+						"type": "Measurement",
+						"raw": [
+							376550168504.635986
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Stop)_#42": {
+						"type": "Measurement",
+						"raw": [
+							376550168791.302002
+						],
+						"unit": "us"
+					}
+				},
+				"ClAdditionWorkload_Execute_#43": {
+					"type": "Event",
+					"OpenClKernelTimer/0: elementwise_operation_ADD_quantized GWS[4,14,14]_#43": {
+						"type": "Measurement",
+						"raw": [
+							27.162000
+						],
+						"unit": "us"
+					},
+					"Wall clock time_#43": {
+						"type": "Measurement",
+						"raw": [
+							81.750000
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Start)_#43": {
+						"type": "Measurement",
+						"raw": [
+							376550168794.760986
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Stop)_#43": {
+						"type": "Measurement",
+						"raw": [
+							376550168876.510986
+						],
+						"unit": "us"
+					}
+				},
+				"ClConvolution2dWorkload_Execute_#44": {
+					"type": "Event",
+					"OpenClKernelTimer/0: gemmlowp_matrix_a_reduction GWS[14,14,1]_#44": {
+						"type": "Measurement",
+						"raw": [
+							7.706000
+						],
+						"unit": "us"
+					},
+					"OpenClKernelTimer/1: gemmlowp_mm_reshaped_only_rhs_t_fused_output_stage_fixedpoint GWS[128,4,14]_#44": {
+						"type": "Measurement",
+						"raw": [
+							11103.918000
+						],
+						"unit": "us"
+					},
+					"Wall clock time_#44": {
+						"type": "Measurement",
+						"raw": [
+							195.209000
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Start)_#44": {
+						"type": "Measurement",
+						"raw": [
+							376550168882.427002
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Stop)_#44": {
+						"type": "Measurement",
+						"raw": [
+							376550169077.635986
+						],
+						"unit": "us"
+					}
+				},
+				"ClDepthwiseConvolutionWorkload_Execute_#45": {
+					"type": "Event",
+					"OpenClKernelTimer/0: dwc_MxN_native_quantized8_nhwc GWS[48,14,14]_#45": {
+						"type": "Measurement",
+						"raw": [
+							608.503000
+						],
+						"unit": "us"
+					},
+					"Wall clock time_#45": {
+						"type": "Measurement",
+						"raw": [
+							103.709000
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Start)_#45": {
+						"type": "Measurement",
+						"raw": [
+							376550169080.677002
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Stop)_#45": {
+						"type": "Measurement",
+						"raw": [
+							376550169184.385986
+						],
+						"unit": "us"
+					}
+				},
+				"ClConvolution2dWorkload_Execute_#46": {
+					"type": "Event",
+					"OpenClKernelTimer/0: gemmlowp_matrix_a_reduction GWS[14,14,1]_#46": {
+						"type": "Measurement",
+						"raw": [
+							26.945000
+						],
+						"unit": "us"
+					},
+					"OpenClKernelTimer/1: gemmlowp_mm_reshaped_only_rhs_t_fused_output_stage_fixedpoint GWS[32,4,14]_#46": {
+						"type": "Measurement",
+						"raw": [
+							15006.164000
+						],
+						"unit": "us"
+					},
+					"Wall clock time_#46": {
+						"type": "Measurement",
+						"raw": [
+							238.250000
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Start)_#46": {
+						"type": "Measurement",
+						"raw": [
+							376550169187.385986
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Stop)_#46": {
+						"type": "Measurement",
+						"raw": [
+							376550169425.635986
+						],
+						"unit": "us"
+					}
+				},
+				"ClConvolution2dWorkload_Execute_#47": {
+					"type": "Event",
+					"OpenClKernelTimer/0: gemmlowp_matrix_a_reduction GWS[14,14,1]_#47": {
+						"type": "Measurement",
+						"raw": [
+							9.533000
+						],
+						"unit": "us"
+					},
+					"OpenClKernelTimer/1: gemmlowp_mm_reshaped_only_rhs_t_fused_output_stage_fixedpoint GWS[256,4,14]_#47": {
+						"type": "Measurement",
+						"raw": [
+							23211.904000
+						],
+						"unit": "us"
+					},
+					"Wall clock time_#47": {
+						"type": "Measurement",
+						"raw": [
+							222.958000
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Start)_#47": {
+						"type": "Measurement",
+						"raw": [
+							376550169429.010986
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Stop)_#47": {
+						"type": "Measurement",
+						"raw": [
+							376550169651.968994
+						],
+						"unit": "us"
+					}
+				},
+				"ClDepthwiseConvolutionWorkload_Execute_#48": {
+					"type": "Event",
+					"OpenClKernelTimer/0: dwc_MxN_native_quantized8_nhwc GWS[72,14,14]_#48": {
+						"type": "Measurement",
+						"raw": [
+							972.197000
+						],
+						"unit": "us"
+					},
+					"Wall clock time_#48": {
+						"type": "Measurement",
+						"raw": [
+							156.917000
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Start)_#48": {
+						"type": "Measurement",
+						"raw": [
+							376550169656.968994
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Stop)_#48": {
+						"type": "Measurement",
+						"raw": [
+							376550169813.885986
+						],
+						"unit": "us"
+					}
+				},
+				"ClConvolution2dWorkload_Execute_#49": {
+					"type": "Event",
+					"OpenClKernelTimer/0: gemmlowp_matrix_a_reduction GWS[14,14,1]_#49": {
+						"type": "Measurement",
+						"raw": [
+							35.586000
+						],
+						"unit": "us"
+					},
+					"OpenClKernelTimer/1: gemmlowp_mm_reshaped_only_rhs_t_fused_output_stage_fixedpoint GWS[32,4,14]_#49": {
+						"type": "Measurement",
+						"raw": [
+							26118.834000
+						],
+						"unit": "us"
+					},
+					"Wall clock time_#49": {
+						"type": "Measurement",
+						"raw": [
+							296.375000
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Start)_#49": {
+						"type": "Measurement",
+						"raw": [
+							376550169818.635986
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Stop)_#49": {
+						"type": "Measurement",
+						"raw": [
+							376550170115.010986
+						],
+						"unit": "us"
+					}
+				},
+				"ClAdditionWorkload_Execute_#50": {
+					"type": "Event",
+					"OpenClKernelTimer/0: elementwise_operation_ADD_quantized GWS[6,14,14]_#50": {
+						"type": "Measurement",
+						"raw": [
+							37.937000
+						],
+						"unit": "us"
+					},
+					"Wall clock time_#50": {
+						"type": "Measurement",
+						"raw": [
+							83.166000
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Start)_#50": {
+						"type": "Measurement",
+						"raw": [
+							376550170119.260986
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Stop)_#50": {
+						"type": "Measurement",
+						"raw": [
+							376550170202.427002
+						],
+						"unit": "us"
+					}
+				},
+				"ClConvolution2dWorkload_Execute_#51": {
+					"type": "Event",
+					"OpenClKernelTimer/0: gemmlowp_matrix_a_reduction GWS[14,14,1]_#51": {
+						"type": "Measurement",
+						"raw": [
+							9.965000
+						],
+						"unit": "us"
+					},
+					"OpenClKernelTimer/1: gemmlowp_mm_reshaped_only_rhs_t_fused_output_stage_fixedpoint GWS[256,4,14]_#51": {
+						"type": "Measurement",
+						"raw": [
+							23477.415000
+						],
+						"unit": "us"
+					},
+					"Wall clock time_#51": {
+						"type": "Measurement",
+						"raw": [
+							201.625000
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Start)_#51": {
+						"type": "Measurement",
+						"raw": [
+							376550170206.052002
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Stop)_#51": {
+						"type": "Measurement",
+						"raw": [
+							376550170407.677002
+						],
+						"unit": "us"
+					}
+				},
+				"ClDepthwiseConvolutionWorkload_Execute_#52": {
+					"type": "Event",
+					"OpenClKernelTimer/0: dwc_MxN_native_quantized8_nhwc GWS[72,14,14]_#52": {
+						"type": "Measurement",
+						"raw": [
+							948.107000
+						],
+						"unit": "us"
+					},
+					"Wall clock time_#52": {
+						"type": "Measurement",
+						"raw": [
+							99.333000
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Start)_#52": {
+						"type": "Measurement",
+						"raw": [
+							376550170412.885986
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Stop)_#52": {
+						"type": "Measurement",
+						"raw": [
+							376550170512.218994
+						],
+						"unit": "us"
+					}
+				},
+				"ClConvolution2dWorkload_Execute_#53": {
+					"type": "Event",
+					"OpenClKernelTimer/0: gemmlowp_matrix_a_reduction GWS[14,14,1]_#53": {
+						"type": "Measurement",
+						"raw": [
+							38.013000
+						],
+						"unit": "us"
+					},
+					"OpenClKernelTimer/1: gemmlowp_mm_reshaped_only_rhs_t_fused_output_stage_fixedpoint GWS[32,4,14]_#53": {
+						"type": "Measurement",
+						"raw": [
+							25349.290000
+						],
+						"unit": "us"
+					},
+					"Wall clock time_#53": {
+						"type": "Measurement",
+						"raw": [
+							219.834000
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Start)_#53": {
+						"type": "Measurement",
+						"raw": [
+							376550170515.177002
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Stop)_#53": {
+						"type": "Measurement",
+						"raw": [
+							376550170735.010986
+						],
+						"unit": "us"
+					}
+				},
+				"ClAdditionWorkload_Execute_#54": {
+					"type": "Event",
+					"OpenClKernelTimer/0: elementwise_operation_ADD_quantized GWS[6,14,14]_#54": {
+						"type": "Measurement",
+						"raw": [
+							42.526000
+						],
+						"unit": "us"
+					},
+					"Wall clock time_#54": {
+						"type": "Measurement",
+						"raw": [
+							77.708000
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Start)_#54": {
+						"type": "Measurement",
+						"raw": [
+							376550170738.885986
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Stop)_#54": {
+						"type": "Measurement",
+						"raw": [
+							376550170816.593994
+						],
+						"unit": "us"
+					}
+				},
+				"ClConvolution2dWorkload_Execute_#55": {
+					"type": "Event",
+					"OpenClKernelTimer/0: gemmlowp_matrix_a_reduction GWS[14,14,1]_#55": {
+						"type": "Measurement",
+						"raw": [
+							6.724000
+						],
+						"unit": "us"
+					},
+					"OpenClKernelTimer/1: gemmlowp_mm_reshaped_only_rhs_t_fused_output_stage_fixedpoint GWS[256,4,14]_#55": {
+						"type": "Measurement",
+						"raw": [
+							22916.924000
+						],
+						"unit": "us"
+					},
+					"Wall clock time_#55": {
+						"type": "Measurement",
+						"raw": [
+							188.666000
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Start)_#55": {
+						"type": "Measurement",
+						"raw": [
+							376550170819.260986
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Stop)_#55": {
+						"type": "Measurement",
+						"raw": [
+							376550171007.927002
+						],
+						"unit": "us"
+					}
+				},
+				"ClDepthwiseConvolutionWorkload_Execute_#56": {
+					"type": "Event",
+					"OpenClKernelTimer/0: dwc_MxN_native_quantized8_nhwc GWS[72,7,7]_#56": {
+						"type": "Measurement",
+						"raw": [
+							232.711000
+						],
+						"unit": "us"
+					},
+					"Wall clock time_#56": {
+						"type": "Measurement",
+						"raw": [
+							105.625000
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Start)_#56": {
+						"type": "Measurement",
+						"raw": [
+							376550171012.593994
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Stop)_#56": {
+						"type": "Measurement",
+						"raw": [
+							376550171118.218994
+						],
+						"unit": "us"
+					}
+				},
+				"ClConvolution2dWorkload_Execute_#57": {
+					"type": "Event",
+					"OpenClKernelTimer/0: gemmlowp_matrix_a_reduction GWS[7,7,1]_#57": {
+						"type": "Measurement",
+						"raw": [
+							18.557000
+						],
+						"unit": "us"
+					},
+					"OpenClKernelTimer/1: gemmlowp_mm_reshaped_only_rhs_t_fused_output_stage_fixedpoint GWS[64,2,7]_#57": {
+						"type": "Measurement",
+						"raw": [
+							10678.373000
+						],
+						"unit": "us"
+					},
+					"Wall clock time_#57": {
+						"type": "Measurement",
+						"raw": [
+							619.375000
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Start)_#57": {
+						"type": "Measurement",
+						"raw": [
+							376550171123.843994
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Stop)_#57": {
+						"type": "Measurement",
+						"raw": [
+							376550171743.218994
+						],
+						"unit": "us"
+					}
+				},
+				"ClConvolution2dWorkload_Execute_#58": {
+					"type": "Event",
+					"OpenClKernelTimer/0: gemmlowp_matrix_a_reduction GWS[7,7,1]_#58": {
+						"type": "Measurement",
+						"raw": [
+							10.679000
+						],
+						"unit": "us"
+					},
+					"OpenClKernelTimer/1: gemmlowp_mm_reshaped_only_rhs_t_fused_output_stage_fixedpoint GWS[256,2,7]_#58": {
+						"type": "Measurement",
+						"raw": [
+							18265.458000
+						],
+						"unit": "us"
+					},
+					"Wall clock time_#58": {
+						"type": "Measurement",
+						"raw": [
+							190.458000
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Start)_#58": {
+						"type": "Measurement",
+						"raw": [
+							376550171747.760986
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Stop)_#58": {
+						"type": "Measurement",
+						"raw": [
+							376550171938.218994
+						],
+						"unit": "us"
+					}
+				},
+				"ClDepthwiseConvolutionWorkload_Execute_#59": {
+					"type": "Event",
+					"OpenClKernelTimer/0: dwc_MxN_native_quantized8_nhwc GWS[120,7,7]_#59": {
+						"type": "Measurement",
+						"raw": [
+							343.712000
+						],
+						"unit": "us"
+					},
+					"Wall clock time_#59": {
+						"type": "Measurement",
+						"raw": [
+							105.416000
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Start)_#59": {
+						"type": "Measurement",
+						"raw": [
+							376550171941.760986
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Stop)_#59": {
+						"type": "Measurement",
+						"raw": [
+							376550172047.177002
+						],
+						"unit": "us"
+					}
+				},
+				"ClConvolution2dWorkload_Execute_#60": {
+					"type": "Event",
+					"OpenClKernelTimer/0: gemmlowp_matrix_a_reduction GWS[7,7,1]_#60": {
+						"type": "Measurement",
+						"raw": [
+							29.566000
+						],
+						"unit": "us"
+					},
+					"OpenClKernelTimer/1: gemmlowp_mm_reshaped_only_rhs_t_fused_output_stage_fixedpoint GWS[64,2,7]_#60": {
+						"type": "Measurement",
+						"raw": [
+							15710.751000
+						],
+						"unit": "us"
+					},
+					"Wall clock time_#60": {
+						"type": "Measurement",
+						"raw": [
+							209.916000
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Start)_#60": {
+						"type": "Measurement",
+						"raw": [
+							376550172052.260986
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Stop)_#60": {
+						"type": "Measurement",
+						"raw": [
+							376550172262.177002
+						],
+						"unit": "us"
+					}
+				},
+				"ClAdditionWorkload_Execute_#61": {
+					"type": "Event",
+					"OpenClKernelTimer/0: elementwise_operation_ADD_quantized GWS[10,7,7]_#61": {
+						"type": "Measurement",
+						"raw": [
+							19.998000
+						],
+						"unit": "us"
+					},
+					"Wall clock time_#61": {
+						"type": "Measurement",
+						"raw": [
+							105.167000
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Start)_#61": {
+						"type": "Measurement",
+						"raw": [
+							376550172266.052002
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Stop)_#61": {
+						"type": "Measurement",
+						"raw": [
+							376550172371.218994
+						],
+						"unit": "us"
+					}
+				},
+				"ClConvolution2dWorkload_Execute_#62": {
+					"type": "Event",
+					"OpenClKernelTimer/0: gemmlowp_matrix_a_reduction GWS[7,7,1]_#62": {
+						"type": "Measurement",
+						"raw": [
+							10.376000
+						],
+						"unit": "us"
+					},
+					"OpenClKernelTimer/1: gemmlowp_mm_reshaped_only_rhs_t_fused_output_stage_fixedpoint GWS[256,2,7]_#62": {
+						"type": "Measurement",
+						"raw": [
+							17466.708000
+						],
+						"unit": "us"
+					},
+					"Wall clock time_#62": {
+						"type": "Measurement",
+						"raw": [
+							182.083000
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Start)_#62": {
+						"type": "Measurement",
+						"raw": [
+							376550172374.260986
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Stop)_#62": {
+						"type": "Measurement",
+						"raw": [
+							376550172556.343994
+						],
+						"unit": "us"
+					}
+				},
+				"ClDepthwiseConvolutionWorkload_Execute_#63": {
+					"type": "Event",
+					"OpenClKernelTimer/0: dwc_MxN_native_quantized8_nhwc GWS[120,7,7]_#63": {
+						"type": "Measurement",
+						"raw": [
+							355.684000
+						],
+						"unit": "us"
+					},
+					"Wall clock time_#63": {
+						"type": "Measurement",
+						"raw": [
+							105.333000
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Start)_#63": {
+						"type": "Measurement",
+						"raw": [
+							376550172559.593994
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Stop)_#63": {
+						"type": "Measurement",
+						"raw": [
+							376550172664.927002
+						],
+						"unit": "us"
+					}
+				},
+				"ClConvolution2dWorkload_Execute_#64": {
+					"type": "Event",
+					"OpenClKernelTimer/0: gemmlowp_matrix_a_reduction GWS[7,7,1]_#64": {
+						"type": "Measurement",
+						"raw": [
+							29.222000
+						],
+						"unit": "us"
+					},
+					"OpenClKernelTimer/1: gemmlowp_mm_reshaped_only_rhs_t_fused_output_stage_fixedpoint GWS[64,2,7]_#64": {
+						"type": "Measurement",
+						"raw": [
+							14726.251000
+						],
+						"unit": "us"
+					},
+					"Wall clock time_#64": {
+						"type": "Measurement",
+						"raw": [
+							181.083000
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Start)_#64": {
+						"type": "Measurement",
+						"raw": [
+							376550172669.843994
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Stop)_#64": {
+						"type": "Measurement",
+						"raw": [
+							376550172850.927002
+						],
+						"unit": "us"
+					}
+				},
+				"ClAdditionWorkload_Execute_#65": {
+					"type": "Event",
+					"OpenClKernelTimer/0: elementwise_operation_ADD_quantized GWS[10,7,7]_#65": {
+						"type": "Measurement",
+						"raw": [
+							19.708000
+						],
+						"unit": "us"
+					},
+					"Wall clock time_#65": {
+						"type": "Measurement",
+						"raw": [
+							124.000000
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Start)_#65": {
+						"type": "Measurement",
+						"raw": [
+							376550172853.802002
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Stop)_#65": {
+						"type": "Measurement",
+						"raw": [
+							376550172977.802002
+						],
+						"unit": "us"
+					}
+				},
+				"ClConvolution2dWorkload_Execute_#66": {
+					"type": "Event",
+					"OpenClKernelTimer/0: gemmlowp_matrix_a_reduction GWS[7,7,1]_#66": {
+						"type": "Measurement",
+						"raw": [
+							10.621000
+						],
+						"unit": "us"
+					},
+					"OpenClKernelTimer/1: gemmlowp_mm_reshaped_only_rhs_t_fused_output_stage_fixedpoint GWS[256,2,7]_#66": {
+						"type": "Measurement",
+						"raw": [
+							16682.002000
+						],
+						"unit": "us"
+					},
+					"Wall clock time_#66": {
+						"type": "Measurement",
+						"raw": [
+							187.167000
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Start)_#66": {
+						"type": "Measurement",
+						"raw": [
+							376550172980.552002
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Stop)_#66": {
+						"type": "Measurement",
+						"raw": [
+							376550173167.718994
+						],
+						"unit": "us"
+					}
+				},
+				"ClDepthwiseConvolutionWorkload_Execute_#67": {
+					"type": "Event",
+					"OpenClKernelTimer/0: dwc_MxN_native_quantized8_nhwc GWS[120,7,7]_#67": {
+						"type": "Measurement",
+						"raw": [
+							356.828000
+						],
+						"unit": "us"
+					},
+					"Wall clock time_#67": {
+						"type": "Measurement",
+						"raw": [
+							113.292000
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Start)_#67": {
+						"type": "Measurement",
+						"raw": [
+							376550173171.093994
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Stop)_#67": {
+						"type": "Measurement",
+						"raw": [
+							376550173284.385986
+						],
+						"unit": "us"
+					}
+				},
+				"ClConvolution2dWorkload_Execute_#68": {
+					"type": "Event",
+					"OpenClKernelTimer/0: gemmlowp_matrix_a_reduction GWS[7,7,1]_#68": {
+						"type": "Measurement",
+						"raw": [
+							28.548000
+						],
+						"unit": "us"
+					},
+					"OpenClKernelTimer/1: gemmlowp_mm_reshaped_only_rhs_t_fused_output_stage_fixedpoint GWS[128,2,7]_#68": {
+						"type": "Measurement",
+						"raw": [
+							30090.542000
+						],
+						"unit": "us"
+					},
+					"Wall clock time_#68": {
+						"type": "Measurement",
+						"raw": [
+							207.708000
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Start)_#68": {
+						"type": "Measurement",
+						"raw": [
+							376550173288.760986
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Stop)_#68": {
+						"type": "Measurement",
+						"raw": [
+							376550173496.468994
+						],
+						"unit": "us"
+					}
+				},
+				"ClConvolution2dWorkload_Execute_#69": {
+					"type": "Event",
+					"OpenClKernelTimer/0: gemmlowp_matrix_a_reduction GWS[7,7,1]_#69": {
+						"type": "Measurement",
+						"raw": [
+							12.781000
+						],
+						"unit": "us"
+					},
+					"OpenClKernelTimer/1: gemmlowp_mm_reshaped_only_rhs_t_fused_output_stage_fixedpoint GWS[512,2,7]_#69": {
+						"type": "Measurement",
+						"raw": [
+							59477.167000
+						],
+						"unit": "us"
+					},
+					"Wall clock time_#69": {
+						"type": "Measurement",
+						"raw": [
+							253.292000
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Start)_#69": {
+						"type": "Measurement",
+						"raw": [
+							376550173501.052002
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Stop)_#69": {
+						"type": "Measurement",
+						"raw": [
+							376550173754.343994
+						],
+						"unit": "us"
+					}
+				},
+				"ClPooling2dWorkload_Execute_#70": {
+					"type": "Event",
+					"OpenClKernelTimer/0: pooling_layer_MxN_quantized_nhwc GWS[320,1,1]_#70": {
+						"type": "Measurement",
+						"raw": [
+							28.107000
+						],
+						"unit": "us"
+					},
+					"Wall clock time_#70": {
+						"type": "Measurement",
+						"raw": [
+							106.833000
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Start)_#70": {
+						"type": "Measurement",
+						"raw": [
+							376550173759.593994
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Stop)_#70": {
+						"type": "Measurement",
+						"raw": [
+							376550173866.427002
+						],
+						"unit": "us"
+					}
+				},
+				"ClConvolution2dWorkload_Execute_#71": {
+					"type": "Event",
+					"OpenClKernelTimer/0: gemmlowp_matrix_a_reduction GWS[1,1,1]_#71": {
+						"type": "Measurement",
+						"raw": [
+							34.039000
+						],
+						"unit": "us"
+					},
+					"OpenClKernelTimer/1: gemmlowp_mm_reshaped_only_rhs_t_fused_output_stage_fixedpoint GWS[256,1,1]_#71": {
+						"type": "Measurement",
+						"raw": [
+							453.070000
+						],
+						"unit": "us"
+					},
+					"Wall clock time_#71": {
+						"type": "Measurement",
+						"raw": [
+							154.000000
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Start)_#71": {
+						"type": "Measurement",
+						"raw": [
+							376550173869.593994
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Stop)_#71": {
+						"type": "Measurement",
+						"raw": [
+							376550174023.593994
+						],
+						"unit": "us"
+					}
+				},
+				"ClReshapeWorkload_Execute_#72": {
+					"type": "Event",
+					"OpenClKernelTimer/0: reshape_layer GWS[1001,1,1]_#72": {
+						"type": "Measurement",
+						"raw": [
+							14.828000
+						],
+						"unit": "us"
+					},
+					"Wall clock time_#72": {
+						"type": "Measurement",
+						"raw": [
+							77.666000
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Start)_#72": {
+						"type": "Measurement",
+						"raw": [
+							376550174029.260986
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Stop)_#72": {
+						"type": "Measurement",
+						"raw": [
+							376550174106.927002
+						],
+						"unit": "us"
+					}
+				},
+				"CopyMemGeneric_Execute_#73": {
+					"type": "Event",
+					"Wall clock time_#73": {
+						"type": "Measurement",
+						"raw": [
+							543894.625000
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Start)_#73": {
+						"type": "Measurement",
+						"raw": [
+							376550174113.593994
+						],
+						"unit": "us"
+					},
+					"Wall clock time (Stop)_#73": {
+						"type": "Measurement",
+						"raw": [
+							376550718008.218994
+						],
+						"unit": "us"
+					},
+					"Synchronize buffers_#74": {
+						"type": "Event",
+						"Wall clock time_#74": {
+							"type": "Measurement",
+							"raw": [
+								543831.583000
+							],
+							"unit": "us"
+						},
+						"Wall clock time (Start)_#74": {
+							"type": "Measurement",
+							"raw": [
+								376550174130.885986
+							],
+							"unit": "us"
+						},
+						"Wall clock time (Stop)_#74": {
+							"type": "Measurement",
+							"raw": [
+								376550717962.468994
+							],
+							"unit": "us"
+						}
+					}
+				}
+			}
+		}
+	}
+}
+Warning: The input data was generated, note that the output will not be useful
+output: 0.000000 0.731617 0.000172 0.044976 0.000176 205032.750000 0.000012 0.002842 720.941956 0.002674 0.044484 0.002780 0.000042 12.266410 0.043760 11.892646 0.000177 3.098034 0.003208 203674672.000000 0.000000 0.000003 0.000000 0.045716 0.000003 0.000000 0.042534 0.045712 50.063858 0.000000 0.000042 45.053883 0.000749 0.000000 0.000001 0.002780 44.562729 0.000000 0.000000 0.000000 0.711642 0.176007 0.000000 0.000011 2.752944 0.000003 0.000000 0.000011 0.000001 0.000000 0.000177 0.000173 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000001 2.691298 0.000003 0.011000 0.000003 0.000003 0.000684 0.000699 0.000000 0.044724 0.000676 0.046441 0.000011 0.000000 0.000000 0.010998 0.045704 0.000012 728.910400 45.568600 3.019485 12687.312500 0.000000 176.235229 0.000000 0.000000 0.000043 0.000181 0.000001 0.000001 0.176003 0.045467 0.000687 174.227493 0.002750 0.000688 0.000183 0.000000 0.000046 0.000044 0.000000 0.000044 53285184.000000 0.000000 0.000000 0.000000 12269608.000000 0.000012 3027.891113 0.002933 0.719882 0.000001 12754.559570 0.731205 0.000000 0.002856 0.000001 0.178899 0.000003 14090294123298816.000000 0.047668 11.324530 12.205381 196.250793 11.271304 3018636.500000 3.065870 0.000000 3140.513672 0.000155 0.000760 0.000000 0.000001 0.000011 51387492317320445952.000000 3258467840.000000 0.000183 208566960128.000000 0.758930 0.000000 0.000046 3.098033 11941449.000000 0.010817 47163.257812 195690348544.000000 0.000003 0.000000 0.000000 0.000718 3.237991 0.000003 47.077385 3266253.250000 2990559744.000000 0.000001 737.331726 2924450479603712.000000 199197395517440.000000 210.227188 0.000000 0.000000 11.389945 0.000000 52566339616768.000000 0.000000 0.000000 0.000003 0.704181 0.000000 789.002808 0.000202 3060.265625 0.000012 0.000000 0.711719 0.000042 0.000000 0.000000 47884863012864.000000 3388682797056.000000 0.000000 192561594368.000000 0.000012 0.000045 0.000001 0.000003 0.011123 50.811737 0.000194 0.000183 0.000000 0.000001 0.000045 3.191061 0.000049 0.000171 186.199890 0.187806 0.000000 0.000010 0.000001 0.000003 0.000722 187.242966 0.000003 3251809339136088861573120.000000 45620.308594 198170814447616.000000 0.000000 11417911.000000 3.129225 0.000000 14176319.000000 46.060738 45990834176.000000 724.801208 202074095616.000000 0.000000 0.000000 0.000045 0.000175 0.000756 0.000012 0.199422 0.003042 207108.859375 3123.765381 0.000798 753.380554 0.000183 0.696368 192.305573 0.000000 0.000000 0.000000 0.000718 0.000000 0.000737 0.754977 182537.046875 11918.548828 0.002719 12046299859779584.000000 0.183919 766821.125000 189.227417 0.000000 0.829258 0.002857 0.000045 0.000003 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 
+Info: 
+Inference time: 558.03 ms
+
+Info: Shutdown time: 314.95 ms
+
