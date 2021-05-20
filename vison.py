@@ -24,10 +24,47 @@ SOFTWARE.
 import json
 from configparser import *
 from optparse import OptionParser        
+import matplotlib.pyplot as plt
+import matplotlib.colors as clrs
+import matplotlib.patches as mpatches
+import random
+import numpy as np
+
+def get_rnd_colors(count):
+	color = ["#"+''.join([random.choice('0123456789ABCDEF') for j in range(6)]) for i in range(count)]
+	print(color)
+	return color
+
+def plot_chart(time_per_kernel,total_time):
+    # Fixing random state for reproducibility
+    np.random.seed(19680801)
+    plt.rcdefaults()
+    fig, ax = plt.subplots()
+    # Example data
+    labels = tuple(list(time_per_kernel.keys()))
+    y_pos = np.arange(len(labels))
+    error = np.random.rand(len(labels))
+    colors = get_rnd_colors(len(labels))
+    ax.barh(y_pos, time_per_kernel.values(), xerr=error, align='center',color=colors)
+    ax.set_yticks(y_pos)
+    ax.set_yticklabels(labels)
+    ax.invert_yaxis()  # labels read top-to-bottom
+    ax.set_xlabel(unit)
+    ax.set_title('How fast do you want to go today?')
+    patches = list()
+    k=0
+    for l in labels:
+        per_str = format(format(((time_per_kernel[l]/total_time)*100.0), '.4f'),'<5')
+        npatch = mpatches.Patch(color=colors[k], label=per_str + '%' + ' ' + l )
+        k+=1
+        patches.append(npatch)
+    plt.legend(handles=patches)
+    plt.show()
 
 if __name__ == "__main__":
     parser = OptionParser()
     parser.add_option("-j", "--jfile", dest="jfile", default="", help="JSON file to be analysed", metavar="JSON_FILE")
+    parser.add_option("--image",dest="image", default=False, action="store_true",help="The script will generate an image summary")
     (options, args) = parser.parse_args()
     config = ConfigParser()
     jfilename = options.jfile
@@ -81,9 +118,6 @@ if __name__ == "__main__":
                                         time_per_kernel[kernel] = timer
                                     s = format(timer, '>12')
                                     print('\t',s,unit,'\t\t\t', kernel)
-        ##                        elif 'Wall clock time_' in v:
-        ##                            print('\t', 'pa')                    
-                            
             print('\n\n')
             print ('Inference time: ', jdict['ArmNN']['inference_measurements_#1']['Wall clock time_#1']['raw'][0],unit)
             print('Total kernel time ', total_kernel_time, unit)
@@ -92,7 +126,9 @@ if __name__ == "__main__":
                 perc = time/total_kernel_time
                 print('\t', format(format(time, '.4f'),'<20'),unit, '\t\t%', format(format(perc, '.8f'),'<5'),'\t\t\t', kernel )
 
-           
+            if options.image:
+                plot_chart(time_per_kernel,total_kernel_time)
+          
     except IOError:
         print("Could not read file:", jfilename)
 

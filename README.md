@@ -6,6 +6,12 @@ The output of the profiler can be generated when running a model with the -e opt
 
 Then the vison script can be used to visualize how much time each workload takes and to see a breakdown of how much time each kernel takes over the total execution time.
 
+Dependencies:
+This script requires matplotlib and numpy to draw the charts.
+
+Install this dependencie: pip3 install matplotlib
+
+
 See below an example of running the script and the type of information which generates.
 
 ```
