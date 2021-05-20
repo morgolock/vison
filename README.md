@@ -204,6 +204,10 @@ Total time per kernel				Percentage of total time		Kernel name
 
 For more information about ArmNN and ExecuteNetwork visit: https://github.com/ARM-software/armnn/tree/branches/armnn_21_02/tests/ExecuteNetwork
 
+The option --image will generate a report like the one below:
+
+![example](https://user-images.githubusercontent.com/5577511/118973060-2ea1ea80-b969-11eb-8b0c-a6401be583a9.png)
+
+
 Plans for the future:
-* Add an option output charts with a summary of how much of the total time each layer takes.
 * Add an option to compare two profiler files.
