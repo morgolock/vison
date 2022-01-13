@@ -65,9 +65,12 @@ if __name__ == "__main__":
     parser = OptionParser()
     parser.add_option("-j", "--jfile", dest="jfile", default="", help="JSON file to be analysed", metavar="JSON_FILE")
     parser.add_option("--image",dest="image", default=False, action="store_true",help="The script will generate an image summary")
+    parser.add_option("-k", "--inferencekey", dest="ik", default="1", help="Inference key", metavar="IK")
+ 
     (options, args) = parser.parse_args()
     config = ConfigParser()
     jfilename = options.jfile
+    ik = options.ik
     try:
         with open(jfilename, 'r') as in_file1:
             Lines = in_file1.readlines()
@@ -92,16 +95,16 @@ if __name__ == "__main__":
                 count+=1
 
             jdict = json.loads(json_str)
-            unit = jdict['ArmNN']['inference_measurements_#1']['Wall clock time_#1']['unit']
+            unit = jdict['ArmNN']['inference_measurements_#{}'.format(ik)]['Wall clock time_#{}'.format(ik)]['unit']
             total_kernel_time= 0.0
             time_per_kernel = {}
-            for key in jdict['ArmNN']['inference_measurements_#1']:
+            for key in jdict['ArmNN']['inference_measurements_#{}'.format(ik)]:
                  if 'Execute_#' in key:
-                    for k in jdict['ArmNN']['inference_measurements_#1'][key]:
+                    for k in jdict['ArmNN']['inference_measurements_#{}'.format(ik)][key]:
                         x = k.find("#")
                         if x != -1 and not 'Wall' in k:
                             print(k)
-                            workload =  jdict['ArmNN']['inference_measurements_#1'][key][k]
+                            workload =  jdict['ArmNN']['inference_measurements_#{}'.format(ik)][key][k]
                             for kernel in workload:
                                 if 'OpenClKernelTimer' in kernel or 'NeonKernelTimer' in kernel:
                                     timer = float(workload[kernel]['raw'][0])
@@ -119,7 +122,7 @@ if __name__ == "__main__":
                                     s = format(timer, '>12')
                                     print('\t',s,unit,'\t\t\t', kernel)
             print('\n\n')
-            print ('Inference time: ', jdict['ArmNN']['inference_measurements_#1']['Wall clock time_#1']['raw'][0],unit)
+            print ('Inference time: ', jdict['ArmNN']['inference_measurements_#{}'.format(ik)]['Wall clock time_#{}'.format(ik)]['raw'][0],unit)
             print('Total kernel time ', total_kernel_time, unit)
             print('\nTotal time per kernel\t\t\t\tPercentage of total time\t\tKernel name')
             for kernel, time in sorted(time_per_kernel.items(), key=lambda x: x[1]):
