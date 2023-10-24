@@ -61,6 +61,9 @@ def plot_chart(time_per_kernel,total_time):
     plt.legend(handles=patches)
     plt.show()
 
+def convert_to_ms(in_time, in_unit):
+    return in_time / 1000
+
 if __name__ == "__main__":
     parser = OptionParser()
     parser.add_option("-j", "--jfile", dest="jfile", default="", help="JSON file to be analysed", metavar="JSON_FILE")
@@ -96,6 +99,7 @@ if __name__ == "__main__":
 
             jdict = json.loads(json_str)
             unit = jdict['ArmNN']['inference_measurements_#{}'.format(ik)]['Wall clock time_#{}'.format(ik)]['unit']
+            inference_time = jdict['ArmNN']['inference_measurements_#{}'.format(ik)]['Wall clock time_#{}'.format(ik)]['raw'][0]
             total_kernel_time= 0.0
             time_per_kernel = {}
             for key in jdict['ArmNN']['inference_measurements_#{}'.format(ik)]:
@@ -122,12 +126,13 @@ if __name__ == "__main__":
                                     s = format(timer, '>12')
                                     print('\t',s,unit,'\t\t\t', kernel)
             print('\n\n')
-            print ('Inference time: ', jdict['ArmNN']['inference_measurements_#{}'.format(ik)]['Wall clock time_#{}'.format(ik)]['raw'][0],unit)
-            print('Total kernel time ', total_kernel_time, unit)
+
+            print (f"Inference time: {inference_time} {unit}")
+            print(f"Total kernel time {format(total_kernel_time,'.4f')} {unit}")
             print('\nTotal time per kernel\t\t\t\tPercentage of total time\t\tKernel name')
             for kernel, time in sorted(time_per_kernel.items(), key=lambda x: x[1]):
                 perc = time/total_kernel_time
-                print('\t', format(format(time, '.4f'),'<20'),unit, '\t\t%', format(format(perc, '.8f'),'<5'),'\t\t\t', kernel )
+                print(f"\t  {format(time, '.4f')} {unit}  \t\t\t  {format(format(perc, '.4f'),'<5')} \t\t\t\t {kernel}")
 
             if options.image:
                 plot_chart(time_per_kernel,total_kernel_time)
