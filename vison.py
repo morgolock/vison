@@ -127,12 +127,13 @@ if __name__ == "__main__":
                                     print('\t',s,unit,'\t\t\t', kernel)
             print('\n\n')
 
-            print (f"Inference time: {inference_time} {unit}")
+            print(f"Inference time: {inference_time} {unit}")
             print(f"Total kernel time {format(total_kernel_time,'.4f')} {unit}")
-            print('\nTotal time per kernel\t\t\t\tPercentage of total time\t\tKernel name')
+            print('\nTotal time per kernel {unit} \t\t\t\tPercentage of total time\t\tKernel name')
             for kernel, time in sorted(time_per_kernel.items(), key=lambda x: x[1]):
                 perc = time/total_kernel_time
-                print(f"\t  {format(time, '.4f')} {unit}  \t\t\t  {format(format(perc, '.4f'),'<5')} \t\t\t\t {kernel}")
+                fmt_time = format(time, '.4f')
+                print(f"\t  {format(fmt_time, '>14')}   \t\t\t  {format(format(perc, '.4f'),'<5')}% \t\t\t\t {kernel}")
 
             if options.image:
                 plot_chart(time_per_kernel,total_kernel_time)
